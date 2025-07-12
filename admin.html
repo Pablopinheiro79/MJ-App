@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MJ App - Painel ADM</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <button onclick="logout()">Sair</button>
+
+  <div class="container">
+    <h1>Painel do Administrador</h1>
+    <button onclick="exportarCSV()">Exportar CSV</button>
+
+    <div id="conteudo-admin"></div>
+  </div>
+
+  <script type="module" src="admin.js"></script>
+<div id="mensagem" class="mensagem hidden"></div>
+
+</body>
+</html>

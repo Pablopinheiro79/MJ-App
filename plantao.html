@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MJ App - Plantão</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <button id="btn-sair" onclick="logout()">Sair</button>
+
+
+  <div class="container">
+    <h1>Registrar Plantão</h1>
+    <p id="nome-medico" class="nome-medico">Carregando médico...</p>
+
+
+    <label for="hospital">Hospital:</label>
+    <input type="text" id="hospital" placeholder="Digite o nome do hospital" required>
+
+    <label for="data-plantao">Data do Plantão:</label>
+    <input type="date" id="data-plantao" required>
+
+    <label for="hora-inicio">Hora de Início:</label>
+    <select id="hora-inicio"></select>
+
+    <label for="hora-fim">Hora de Término:</label>
+    <select id="hora-fim"></select>
+
+    <button id="btn-resumo">Ver Resumo</button>
+
+    <div id="resumo" class="hidden">
+      <h2>Resumo do Plantão</h2>
+      <p id="resumo-texto"></p>
+      <button onclick="confirmarPlantao()">Confirmar</button>
+    </div>
+  </div>
+  <hr>
+<h2>Meus Plantões</h2>
+
+
+<ul id="lista-plantoes"></ul>
+
+<div id="mensagem" class="mensagem hidden"></div>
+<script src="plantao.js"></script>
+
+</body>
+</html>

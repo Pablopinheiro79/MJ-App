@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MJ App - Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>MJ App</h1>
+    <hr>
+    <p> Registre seus plantões e agilizamos o processo administrativo dos pagamentos.</p>
+
+    <div id="form-login" class="form-section">
+      <h2>Login</h2>
+      <input type="email" id="login-email" placeholder="Email" required>
+      <input type="password" id="login-password" placeholder="Senha" required>
+      <button onclick="login()">Entrar</button>
+      <p onclick="showCadastro()">Não tem conta? Cadastre-se</p>
+    </div>
+
+    <div id="form-cadastro" class="form-section hidden">
+      <h2>Cadastro</h2>
+      <input type="text" id="cad-nome" placeholder="Nome completo" required>
+      <input type="email" id="cad-email" placeholder="Email" required>
+      <input type="password" id="cad-senha" placeholder="Senha" required>
+      <input type="text" id="cad-hospitais" placeholder="Hospitais (separar por vírgula)" required>
+      <button onclick="cadastrar()">Cadastrar</button>
+      <p onclick="showLogin()">Já tem conta? Fazer login</p>
+    </div>
+  </div>
+
+<script type="module" src="firebase-init.js"></script>
+<script src="app.js"></script>
+<div id="mensagem" class="mensagem hidden"></div>
+
+</body>
+</html>

@@ -1,0 +1,111 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f2f2f2;
+  margin: 0;
+  padding: 0;
+  margin-right: 40px;
+  margin-left: 20px;
+  align-items: center;
+}
+
+.container {
+  width: 90%;
+  max-width: 500px;
+  margin: 80px auto 100px auto; /* mais espaço em cima e abaixo */
+  background: #fff;
+  padding: 30px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+
+h1, h2 {
+  text-align: center;
+  color: #2a2a2a;
+}
+
+input {
+  width: 100%;
+  margin: 10px 0;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+p {
+  text-align: center;
+  margin-top: 10px;
+  color: #007BFF;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+.nome-medico {
+  text-align: center;
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.mensagem {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #2ecc71;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  z-index: 999;
+  transition: opacity 0.3s ease;
+}
+
+.mensagem.erro {
+  background: #e74c3c;
+}
+
+.hidden {
+  display: none;
+}
+
+.form-section {
+    margin-right: 14px;
+    text-align: center;
+}
+
+#btn-sair {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px 20px;
+  background-color: #e74c3c;
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+#btn-sair:hover {
+  background-color: #c0392b;
+}
