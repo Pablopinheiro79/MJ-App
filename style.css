@@ -1,51 +1,93 @@
-body {
-  font-family: Arial, sans-serif;
-  background: #f2f2f2;
+/* Reset e base */
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  margin-right: 40px;
-  margin-left: 20px;
-  align-items: center;
 }
 
+body {
+  font-family: Arial, sans-serif;
+  background: #f9f9f9;
+  margin: 0;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #333;
+}
+
+/* Container principal */
 .container {
-  width: 90%;
+  width: 100%;
   max-width: 500px;
-  margin: 80px auto 100px auto; /* mais espaço em cima e abaixo */
-  background: #fff;
+  margin: 80px auto 100px auto;
+  background: #ffffff;
   padding: 30px 20px;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
-
+/* Títulos */
 h1, h2 {
   text-align: center;
-  color: #2a2a2a;
+  color: #2c3e50;
+  margin-bottom: 20px;
 }
 
-input {
+/* Inputs e selects */
+input,
+select {
   width: 100%;
-  margin: 10px 0;
+  margin: 10px 0 20px 0;
   padding: 12px;
   border: 1px solid #ccc;
   border-radius: 8px;
+  background-color: #fff;
+  font-size: 1rem;
 }
 
+/* Botões */
 button {
   width: 100%;
   padding: 12px;
   background: #007BFF;
-  color: white;
+  color: #fff;
   border: none;
   border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
   cursor: pointer;
+  transition: background 0.3s ease;
 }
 
 button:hover {
   background: #0056b3;
 }
 
+#btn-sair {
+  position: fixed;
+  bottom: 20px;
+  right: 20px; 
+  width: auto; 
+  min-width: 100px;
+  padding: 10px 20px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 0.95rem;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease;
+}
+
+#btn-sair:hover {
+  background-color: #c0392b;
+}
+
+/* Parágrafos clicáveis */
 p {
   text-align: center;
   margin-top: 10px;
@@ -53,17 +95,16 @@ p {
   cursor: pointer;
 }
 
-.hidden {
-  display: none;
-}
-
+/* Nome do médico */
 .nome-medico {
   text-align: center;
   font-weight: bold;
   color: #555;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
 }
 
+/* Mensagem flutuante */
 .mensagem {
   position: fixed;
   bottom: 20px;
@@ -83,29 +124,30 @@ p {
   background: #e74c3c;
 }
 
+
 .hidden {
   display: none;
 }
 
-.form-section {
-    margin-right: 14px;
-    text-align: center;
+
+.form-group {
+  margin-bottom: 16px;
 }
 
-#btn-sair {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  padding: 12px 20px;
-  background-color: #e74c3c;
-  border: none;
-  color: white;
-  font-weight: bold;
-  border-radius: 8px;
-  cursor: pointer;
-  z-index: 1000;
+ul {
+  list-style-type: none;
+  padding-left: 0;
 }
 
-#btn-sair:hover {
-  background-color: #c0392b;
+
+@media (max-width: 600px) {
+  .container {
+    padding: 20px 15px;
+    margin: 60px 10px 100px 10px;
+  }
+
+  #btn-sair {
+    padding: 10px 16px;
+    font-size: 0.9rem;
+  }
 }
